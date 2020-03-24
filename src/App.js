@@ -9,6 +9,10 @@ function App() {
     edad: 37
   }
 
+  const saludarFn = name => {
+    alert("Hola " + name);
+  };
+
   return (
     <div className="App">
       <header className="App-header">
@@ -17,7 +21,7 @@ function App() {
           Edit <code>src/App.js</code> and save to reload.
         </p>
 
-        <Saludar userInfo = {user}/>
+        <Saludar userInfo = {user} saludarFn = {saludarFn}/>
       </header>
     </div>
   );
