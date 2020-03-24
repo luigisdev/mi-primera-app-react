@@ -4,9 +4,11 @@ import './App.css';
 import Saludar from './components/Saludar';
 
 function App() {
-  const userName  = "Luis García";
-  const edad      = 37;
-  
+  const user = {
+    nombre: "Luis García",
+    edad: 37
+  }
+
   return (
     <div className="App">
       <header className="App-header">
@@ -15,7 +17,7 @@ function App() {
           Edit <code>src/App.js</code> and save to reload.
         </p>
 
-        <Saludar name = {userName} edad = {edad}/>
+        <Saludar userInfo = {user}/>
       </header>
     </div>
   );
