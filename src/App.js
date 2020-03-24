@@ -1,6 +1,8 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import HolaMundo from './components/HolaMundo';
+import AdiosMundo from './components/AdiosMundo';
 
 function App() {
   return (
@@ -18,6 +20,10 @@ function App() {
         >
           Learn React
         </a>
+
+        <HolaMundo />
+
+        <AdiosMundo />
       </header>
     </div>
   );
