@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Saludar from './components/Saludar';
@@ -17,9 +17,19 @@ function App() {
     alert(`Hola ${name}`);
   };
 
+  const [stateCar, setStateCar] = useState(false);
+  const encenderApagar = () => {
+    console.log('Encender | Apagar');
+    // se le manda el valor contrario que tenga stateCar a setStateCar con el signo de admiración
+    // setStateCar(!stateCar);
+    // obteniendo el valor previo del state:
+    setStateCar(prevValue => !prevValue);
+  }
   return (
     <div className="App">
       <header className="App-header">
+        <h2>El coche está: {stateCar === true ? 'Encendido' : 'Apagado'}</h2>
+        <Button variant="primary" onClick={encenderApagar}>Encender | Apagar</Button>
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
