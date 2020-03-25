@@ -10,7 +10,9 @@ function App() {
   }
 
   const saludarFn = name => {
-    alert("Hola " + name);
+    // alert("Hola " + name);
+    // Usando template strings 
+    alert(`Hola ${name}`);
   };
 
   return (
