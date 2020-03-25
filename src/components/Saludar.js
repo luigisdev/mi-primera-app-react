@@ -1,11 +1,13 @@
 import React from 'react';
 
 function Saludar(props){
+    const {userInfo, saludarFn} = props;
+    
     return (
         <div>
-            <h1>Hola {props.userInfo.nombre} tiene {props.userInfo.edad} años</h1>
+            <h1>Hola {userInfo.nombre} tiene {userInfo.edad} años</h1>
 
-            <button onClick={() => props.saludarFn(props.userInfo.nombre)}>Saludar</button>
+            <button onClick={() => saludarFn(userInfo.nombre)}>Saludar</button>
         </div>
     );
 }
