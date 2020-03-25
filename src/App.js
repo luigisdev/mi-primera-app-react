@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import Saludar from './components/Saludar';
 import { Button, Accordion, Card } from 'react-bootstrap';
+import { ReactComponent as ReactIcon } from './logo.svg';
 
 function App() {
   const user = {
@@ -52,6 +53,8 @@ function App() {
             </Accordion.Collapse>
           </Card>
         </Accordion>
+
+        <ReactIcon></ReactIcon>
       </header>
     </div>
   );
