@@ -4,6 +4,9 @@ import './App.css';
 import Saludar from './components/Saludar';
 import { Button, Accordion, Card } from 'react-bootstrap';
 import { ReactComponent as ReactIcon } from './logo.svg';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import Contacto from './pages/Contacto';
+import QuienSoy from './pages/QuienSoy';
 
 function App() {
   const user = {
@@ -35,6 +38,28 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <Router>
+          <div>
+            <Link to = "/">
+              <button variant="primary">Home</button>
+            </Link>
+            <Link to = "/contacto">
+              <button variant="primary">Contacto</button>
+            </Link>
+            <Link to = "/quien-soy">
+              <button variant="primary">Quien soy</button>
+            </Link>
+          </div>
+
+          <Switch>
+            <Route path="/contacto">
+              <Contacto />
+            </Route>
+            <Route path="/quien-soy">
+              <QuienSoy />
+            </Route>
+          </Switch>
+        </Router>
         <h2>El coche está: {stateCar === true ? 'Encendido' : 'Apagado'}</h2>
         <Button variant="primary" onClick={encenderApagar}>Encender | Apagar</Button>
         <img src={logo} className="App-logo" alt="logo" />
